@@ -21,7 +21,7 @@ class Entry implements \ArrayAccess
 
 
     public function __construct(private readonly array $data = []){
-        $this->_data = $this->data['attributes'] ?? [];
+        $this->_data = $this->data['attributes'] ?? $this->data;
     }
 
     public function getId(): ?int
