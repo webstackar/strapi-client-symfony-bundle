@@ -31,6 +31,11 @@ class Collection extends ArrayCollection
     {
         return $this->meta['pagination']['pageCount'] ?? 1;
     }
+    
+    public function getCurrentPage(): int
+    {
+        return $this->meta['pagination']['page'] ?? 1;
+    }
 
     /**
      * @return Entry[]
