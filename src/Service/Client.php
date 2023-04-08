@@ -48,7 +48,7 @@ class Client
         $result = $this->sendRequest('GET', $this->getApiUrl() . $type, [
             'query' => $query?->getParams()
         ]);
-        return new Collection(data: $result['data'], meta: $result['meta']);
+        return new Collection(data: $result['data']??$result, meta: $result['meta']??[]);
     }
 
     /**
